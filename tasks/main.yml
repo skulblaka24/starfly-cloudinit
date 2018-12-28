@@ -1,0 +1,8 @@
+---
+# tasks file for cloud-init-disabling
+
+- name: Désinstallation de Cloud-init sur RHEL
+  yum:
+    name: cloud-init
+    state: absent
+  when: ansible_distribution == "RedHat"
